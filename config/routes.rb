@@ -4,5 +4,5 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
-  rresources :users, only: [:new, :create]
+  resources :users, only: [:new, :create]
 end
