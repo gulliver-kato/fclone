@@ -10,14 +10,14 @@ class BlogsController < ApplicationController
 
   def new
     if params[:back]
-      @blog = Blog.new(feed_params)
+      @blog = Blog.new(blog_params)
     else
       @blog = Blog.new
     end
   end
 
   def confirm
-    @blog = Blog.new(feed_params)
+    @blog = Blog.new(blog_params)
   end
   
   
@@ -59,11 +59,11 @@ class BlogsController < ApplicationController
   end
 
   private
-    def set_feed
+    def set_blog
       @blog = Blog.find(params[:id])
     end
 
-    def feed_params
-      params.require(:blog).permit(:image, :image_cache)
+    def blog_params
+      params.require(:blog).permit(:image, :image_cache, :content)
     end
 end
