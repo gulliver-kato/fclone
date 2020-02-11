@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Blogs</h1>
 
 <table>
@@ -18,9 +16,9 @@
         <td><%= blog.content %></td>
         <td><%= image_tag(blog.image.url) if blog.image && blog.image.url %></td>
         <td><%= blog.user.name%></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', blog, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog), class: "btn btn-default"  %></td>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %></td>
       </tr>
     <% end %>
   </tbody>
