@@ -26,4 +26,9 @@
 
 <br>
 
-<%= link_to 'New Blog', new_blog_path %>
+<% if logged_in? %>
+    <ul class="nav nav-tabs">
+      <li role="presentation"><%= link_to 'New Blog', new_blog_path %></li>
+    </ul>
+    <% end %>
+
